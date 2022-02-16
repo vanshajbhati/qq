@@ -32,7 +32,7 @@ class _BuyTokenState extends State<BuyToken> {
 
                   Text("Buy Ticket", style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    fontSize: 30
+                    fontSize: 25
                   ),),
 
                   InkWell(
@@ -40,7 +40,7 @@ class _BuyTokenState extends State<BuyToken> {
                         Navigator.pushReplacement(context, MaterialPageRoute(builder: (Context)=>Home()));
                       },
 
-                      child: ImageIcon( AssetImage("assets/cancel.png", ), color: Colors.black,size: 40,)),
+                      child: ImageIcon( AssetImage("assets/cancel.png", ), color: Colors.black,size: 30,)),
                 ],
               ),
 
@@ -60,10 +60,11 @@ class _BuyTokenState extends State<BuyToken> {
                 children: [
                   Container(
                     padding: EdgeInsets.all(10),
-                    width: MediaQuery.of(context).size.width/2,
+                    width: 180,
 
                     decoration: BoxDecoration(
-                        border: Border.all(color: Colors.grey, width: 3)
+                        border: Border.all(color: Colors.grey, width: 3),
+                      borderRadius: BorderRadius.circular(20)
                     ),
 
                     child: TextField(
@@ -84,7 +85,7 @@ class _BuyTokenState extends State<BuyToken> {
 
 
               Text('T&C Apply', style: TextStyle(
-                  fontSize: 21
+                  fontSize: 18
               ),),
               Padding(padding: EdgeInsets.all(10)),
 
@@ -95,12 +96,12 @@ class _BuyTokenState extends State<BuyToken> {
 
                   child:  Container(
 
-                    width: 180,
+                    width: 170,
                     padding: EdgeInsets.all(15),
                     child: Text(
                         'Buy Tickets',textAlign: TextAlign.center,
                         style: TextStyle(color: Colors.white,
-                            fontSize: 20),
+                            fontSize: 18),
                       ),
                   ),
 
@@ -120,7 +121,7 @@ class _BuyTokenState extends State<BuyToken> {
               Padding(padding: EdgeInsets.all(5)),
               Text("2 Ticket codes are left", style: TextStyle(
                 color: Colors.black,
-                fontSize: 20,
+                fontSize: 16,
                 fontWeight: FontWeight.bold
               ),),
 
@@ -136,7 +137,7 @@ class _BuyTokenState extends State<BuyToken> {
                       child:  Container(
                         margin: EdgeInsets.only(bottom: 20),
                         width: MediaQuery.of(context).size.width,
-                        height: 80,
+                        height: 60,
                         color: Colors.grey[100],
 
                         child: Row(
@@ -191,7 +192,7 @@ class _BuyTokenState extends State<BuyToken> {
                               Clipboard.setData(ClipboardData(text: "5237"));
                             },
 
-                              child: ImageIcon( AssetImage("assets/copy.png", ), color: Colors.black,size: 40,))
+                              child: ImageIcon( AssetImage("assets/copy.png", ), color: Colors.black,size: 20,))
                             
 
                           ],

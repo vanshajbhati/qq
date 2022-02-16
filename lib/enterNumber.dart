@@ -34,31 +34,24 @@ class _EnterNumberState extends State<EnterNumber> {
             children: [
               SizedBox(
                   height: 250,
+              width: 280,
               child: Image.asset('assets/login.png'), ),
 
 
-              Column(
-                children: [
-                  Text(
-                    'Enter your phone number',textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 25,
-                      fontWeight: FontWeight.bold
+              RichText(
+                textAlign: TextAlign.center,
+                text: TextSpan(
+                  text: 'Enter your phone number\n',
+                  style: TextStyle(color: Colors.black, fontSize: 22.0, fontWeight: FontWeight.bold),
+                  children: <TextSpan>[
+                    TextSpan(
+                        text: 'We will send a code (via SMS text message) to your phone number',
+                        style: TextStyle(fontWeight: FontWeight.normal,fontSize: 20.0 )
                     ),
-                  ),
- Padding(
-   padding: EdgeInsets.all(5),
- ),
-                  Text(
-                    'We will send a code (via SMS text message) to your phone number',textAlign: TextAlign.center,
-                    style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.normal
-                    ),
-                  ),
-
-                ],
+                  ],
+                ),
               ),
+
 
 
 
@@ -69,7 +62,7 @@ class _EnterNumberState extends State<EnterNumber> {
               Container(
 
                 height: 55,
-                width: MediaQuery.of(context).size.width,
+                 width: 280,
 
                 decoration: BoxDecoration(
                   color: Color(0xffefefef),
@@ -97,6 +90,7 @@ class _EnterNumberState extends State<EnterNumber> {
 
                     Expanded(child: TextField(
 
+                      keyboardType: TextInputType.number,
 
                       decoration: InputDecoration(
                         border: InputBorder.none,
@@ -132,8 +126,8 @@ class _EnterNumberState extends State<EnterNumber> {
               InkWell(
                 child: Container(
 
-                  height: 60,
-                  width: MediaQuery.of(context).size.width,
+                  height: 56,
+                  width: 240,
 
                   decoration: BoxDecoration(
                       color: colorResource.primaryColor,

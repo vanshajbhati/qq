@@ -29,18 +29,18 @@ padding: EdgeInsets.all(30),
 
               Text("Notifications", style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 30
+                  fontSize: 26
               ),),
               Text("You have 3 Notification Today", style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 15,
+                  fontSize: 12,
                 color: Colors.black54
               ),),
               Padding(padding: EdgeInsets.only(top: 20)),
 
               Text("Today", style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 30,
+                  fontSize: 26,
                 color: colorResource.primaryColor
               ),),
 
@@ -56,7 +56,7 @@ padding: EdgeInsets.all(30),
 
                     },
                     child:  Container(
-                      padding: EdgeInsets.fromLTRB(00, 20, 00, 30),
+                      padding: EdgeInsets.fromLTRB(00, 20, 00, 10),
                       decoration: BoxDecoration(
                         border: Border(
                           bottom: BorderSide(width: 1, color: Colors.grey)
@@ -117,7 +117,7 @@ padding: EdgeInsets.all(30),
 
               Text("This Week", style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 30,
+                  fontSize: 26,
                   color: colorResource.primaryColor
               ),),
 
@@ -133,7 +133,7 @@ padding: EdgeInsets.all(30),
 
                       },
                       child:  Container(
-                        padding: EdgeInsets.fromLTRB(00, 20, 00, 30),
+                        padding: EdgeInsets.fromLTRB(00, 20, 00, 10),
                         decoration: BoxDecoration(
                             border: Border(
                                 bottom: BorderSide(width: 1, color: Colors.grey)

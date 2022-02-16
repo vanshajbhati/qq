@@ -3,6 +3,7 @@ import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:qq/colors.dart';
 
 import 'package:qq/home.dart';
+import 'package:qq/registration.dart';
 
 class otpVerification extends StatefulWidget {
   const otpVerification({Key? key}) : super(key: key);
@@ -74,64 +75,70 @@ class _otpVerificationState extends State<otpVerification> {
 
 
 
-            PinCodeTextField(
-              appContext: context,
-              pastedTextStyle: TextStyle(
-                color: Colors.green.shade600,
-                fontWeight: FontWeight.bold,
-              ),
-              length: 4,
-              obscureText: true,
-              obscuringCharacter: '*',
-              obscuringWidget: FlutterLogo(
-                size: 24,
-              ),
-              blinkWhenObscuring: true,
-              animationType: AnimationType.fade,
-              validator: (v) {
-                if (v!.length < 3) {
-                  return "I'm from validator";
-                } else {
-                  return null;
-                }
-              },
-              pinTheme: PinTheme(
-                shape: PinCodeFieldShape.box,
-                borderRadius: BorderRadius.circular(5),
-                fieldHeight: 50,
-                fieldWidth: 40,
-                activeFillColor: Colors.white,
-              ),
-              cursorColor: Colors.black,
-              animationDuration: Duration(milliseconds: 300),
-              enableActiveFill: true,
+            Container(
+              width: 240,
+              child: PinCodeTextField(
+                appContext: context,
+                pastedTextStyle: TextStyle(
+                  color: Colors.green.shade600,
+                  fontWeight: FontWeight.bold,
+                ),
+                length: 4,
+                obscureText:false,
 
-              keyboardType: TextInputType.number,
-              boxShadows: [
-                BoxShadow(
-                  offset: Offset(0, 1),
-                  color: Colors.black12,
-                  blurRadius: 10,
-                )
-              ],
-              onCompleted: (v) {
-                print("Completed");
-              },
-              // onTap: () {
-              //   print("Pressed");
-              // },
-              onChanged: (value) {
-                print(value);
-                setState(() {
 
-                });
-              },
-              beforeTextPaste: (text) {
-                print("Allowing to paste $text");
-                //if you return true then it will show the paste confirmation dialog. Otherwise if false, then nothing will happen.
-                //but you can show anything you want here, like your pop up saying wrong paste format or etc
-                return true;
-              },
+                blinkWhenObscuring: true,
+                animationType: AnimationType.fade,
+                validator: (v) {
+                  if (v!.length < 3) {
+                    return "";
+                  } else {
+                    return null;
+                  }
+                },
+                pinTheme: PinTheme(
+                  shape: PinCodeFieldShape.box,
+                  borderRadius: BorderRadius.circular(5),
+                  fieldHeight: 50,
+                  fieldWidth: 40,
+                  activeFillColor: Colors.white,
+                  activeColor: Colors.white,
+                  selectedColor: colorResource.primaryColor,
+                  selectedFillColor: Colors.white,
+                  inactiveColor: Colors.white,
+                  inactiveFillColor: Colors.white
+                ),
+                cursorColor: Colors.black,
+                animationDuration: Duration(milliseconds: 300),
+                enableActiveFill: true,
+
+                keyboardType: TextInputType.number,
+                boxShadows: [
+                  BoxShadow(
+                    offset: Offset(0, 1),
+                    color: Colors.black12,
+                    blurRadius: 10,
+                  )
+                ],
+                onCompleted: (v) {
+                  print("Completed");
+                },
+                // onTap: () {
+                //   print("Pressed");
+                // },
+                onChanged: (value) {
+                  print(value);
+                  setState(() {
+
+                  });
+                },
+                beforeTextPaste: (text) {
+                  print("Allowing to paste $text");
+                  //if you return true then it will show the paste confirmation dialog. Otherwise if false, then nothing will happen.
+                  //but you can show anything you want here, like your pop up saying wrong paste format or etc
+                  return true;
+                },
+              ),
             ),
 
 
@@ -146,8 +153,8 @@ class _otpVerificationState extends State<otpVerification> {
 
               InkWell(
                 child: Container(
-                  height: 60,
-                  width: MediaQuery.of(context).size.width,
+                  height: 56,
+                    width: 240,
 
                   decoration: BoxDecoration(
                       color: colorResource.primaryColor,
@@ -163,7 +170,7 @@ class _otpVerificationState extends State<otpVerification> {
                 ),
 
                 onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (Context)=>Home()));
+                  Navigator.push(context, MaterialPageRoute(builder: (Context)=>Registration()));
                 },
               ),
 
@@ -178,4 +185,6 @@ class _otpVerificationState extends State<otpVerification> {
 
     );
   }
+
+
 }

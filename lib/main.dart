@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:qq/enterNumber.dart';
 import 'package:qq/home.dart';
+import 'package:qq/splashScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home:  EnterNumber(),
+      home:  const SplashScreen(),
     );
   }
 }
