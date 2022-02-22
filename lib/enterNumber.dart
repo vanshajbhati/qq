@@ -1,6 +1,7 @@
 
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:qq/colors.dart';
 import 'package:qq/otpVerfication.dart';
 
@@ -42,11 +43,11 @@ class _EnterNumberState extends State<EnterNumber> {
                 textAlign: TextAlign.center,
                 text: TextSpan(
                   text: 'Enter your phone number\n',
-                  style: TextStyle(color: Colors.black, fontSize: 22.0, fontWeight: FontWeight.bold),
+                  style:GoogleFonts.roboto(color: Colors.black, fontSize: 22.0, fontWeight: FontWeight.bold),
                   children: <TextSpan>[
                     TextSpan(
                         text: 'We will send a code (via SMS text message) to your phone number',
-                        style: TextStyle(fontWeight: FontWeight.normal,fontSize: 20.0 )
+                        style:GoogleFonts.roboto(color: Colors.black, fontWeight: FontWeight.normal,fontSize: 20.0),
                     ),
                   ],
                 ),
@@ -126,7 +127,7 @@ class _EnterNumberState extends State<EnterNumber> {
               InkWell(
                 child: Container(
 
-                  height: 56,
+                  height: 50,
                   width: 240,
 
                   decoration: BoxDecoration(
@@ -137,7 +138,7 @@ class _EnterNumberState extends State<EnterNumber> {
                   child: Center(
                     child: Text('Send OTP',style: TextStyle(
                       color: Colors.white,
-                      fontSize: 22
+                      fontSize: 20
                     ),),
                   ),
                 ),

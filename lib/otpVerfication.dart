@@ -153,7 +153,7 @@ class _otpVerificationState extends State<otpVerification> {
 
               InkWell(
                 child: Container(
-                  height: 56,
+                  height: 50,
                     width: 240,
 
                   decoration: BoxDecoration(
@@ -164,7 +164,7 @@ class _otpVerificationState extends State<otpVerification> {
                   child: Center(
                     child: Text('Submit',style: TextStyle(
                         color: Colors.white,
-                        fontSize: 22
+                        fontSize: 20
                     ),),
                   ),
                 ),

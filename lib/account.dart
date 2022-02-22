@@ -149,7 +149,7 @@ backgroundColor: Colors.white,
                       child: Container(
 
                         width: 180,
-                        padding: EdgeInsets.all(15),
+                        padding: EdgeInsets.all(13),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [

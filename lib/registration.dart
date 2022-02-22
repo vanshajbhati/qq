@@ -304,7 +304,7 @@ class _RegistrationState extends State<Registration> {
               InkWell(
                 child: Container(
 
-                  height: 55,
+                  height: 50,
 
                   width: 240,
 
@@ -316,7 +316,7 @@ class _RegistrationState extends State<Registration> {
                   child: Center(
                     child: Text('Continue',style: TextStyle(
                         color: Colors.white,
-                        fontSize: 22
+                        fontSize: 20
                     ),),
                   ),
                 ),
@@ -329,6 +329,9 @@ class _RegistrationState extends State<Registration> {
 
 
 
+              SizedBox(
+                height: 20,
+              )
 
 
 
