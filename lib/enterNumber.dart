@@ -27,6 +27,7 @@ class _EnterNumberState extends State<EnterNumber> {
       body:SingleChildScrollView(
         child: Container(
           height: MediaQuery.of(context).size.height,
+          width: MediaQuery.of(context).size.width,
           padding: EdgeInsets.all(40),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -39,18 +40,28 @@ class _EnterNumberState extends State<EnterNumber> {
               child: Image.asset('assets/login.png'), ),
 
 
-              RichText(
-                textAlign: TextAlign.center,
-                text: TextSpan(
-                  text: 'Enter your phone number\n',
-                  style:GoogleFonts.roboto(color: Colors.black, fontSize: 22.0, fontWeight: FontWeight.bold),
-                  children: <TextSpan>[
-                    TextSpan(
-                        text: 'We will send a code (via SMS text message) to your phone number',
-                        style:GoogleFonts.roboto(color: Colors.black, fontWeight: FontWeight.normal,fontSize: 20.0),
+
+              Column(
+                children: [
+                  Text(
+                    'Enter your phone number',textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold
                     ),
-                  ],
-                ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(6),
+                  ),
+                  Text(
+                    'We will send a code (via SMS text message) to your phone number',textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontSize: 17,
+                        fontWeight: FontWeight.normal
+                    ),
+                  ),
+
+                ],
               ),
 
 
@@ -103,18 +114,7 @@ class _EnterNumberState extends State<EnterNumber> {
                       },
                     ),),
 
-                    Container(
-                      key: Key("tickMark"),
-                      margin: EdgeInsets.all(10),
-                      height: 24,
-                      width: 24,
-                      child: Icon(Icons.check, color: Colors.white,),
 
-                      decoration: BoxDecoration(
-                        color: Colors.green,
-                        borderRadius: BorderRadius.circular(22),
-                      ),
-                    )
 
 
                   ],
@@ -127,8 +127,8 @@ class _EnterNumberState extends State<EnterNumber> {
               InkWell(
                 child: Container(
 
-                  height: 50,
-                  width: 240,
+                  width: 170,
+                  padding: EdgeInsets.all(15),
 
                   decoration: BoxDecoration(
                       color: colorResource.primaryColor,
@@ -138,7 +138,7 @@ class _EnterNumberState extends State<EnterNumber> {
                   child: Center(
                     child: Text('Send OTP',style: TextStyle(
                       color: Colors.white,
-                      fontSize: 20
+                      fontSize: 18
                     ),),
                   ),
                 ),

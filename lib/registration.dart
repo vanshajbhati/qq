@@ -10,8 +10,12 @@ class Registration extends StatefulWidget {
 }
 
 class _RegistrationState extends State<Registration> {
+  bool valueCheck =false;
+
   @override
   Widget build(BuildContext context) {
+
+
     return Scaffold(
 
       backgroundColor: Colors.white,
@@ -59,7 +63,7 @@ class _RegistrationState extends State<Registration> {
                   children: [
                     Text(
                       "Sign up ", style: TextStyle(
-                        color: Colors.black54,
+                        color: Colors.black,
                         fontWeight: FontWeight.bold,
                         fontSize: 28
                     ),
@@ -140,7 +144,7 @@ class _RegistrationState extends State<Registration> {
 
 
                                   decoration: InputDecoration(
-                                    hintText: "Enter Password",
+                                    hintText: "Enter Name",
                                     enabledBorder: UnderlineInputBorder(
                                       borderSide: BorderSide(color: Colors.black),
                                     ),
@@ -192,7 +196,7 @@ class _RegistrationState extends State<Registration> {
 
 
                                   decoration: InputDecoration(
-                                    hintText: "Enter Password",
+                                    hintText: "Enter Phone",
                                     enabledBorder: UnderlineInputBorder(
                                       borderSide: BorderSide(color: Colors.black),
                                     ),
@@ -216,7 +220,7 @@ class _RegistrationState extends State<Registration> {
                       ],
                     ),
                     Padding(
-                      padding: EdgeInsets.only(top: 10),
+                      padding: EdgeInsets.only(top: 20),
                     ),
 
                     Column(
@@ -224,13 +228,25 @@ class _RegistrationState extends State<Registration> {
 
                       children: [
                         Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.start,
                           children: [
+                            Container(
+                              width:30,
+                              height: 10,
+                              child: Checkbox(
+                              value: this.valueCheck,
+                                onChanged: ( value) {
+                                  setState(() {
+                                    this.valueCheck = value!;
+                                  });
+                                },
+                              ),
+                            ),
                             Text(
                               "By Signing up, you are agree to the ", style: TextStyle(
                                 color: Colors.black,
                                 fontWeight: FontWeight.bold,
-                                fontSize: 12
+                                fontSize: 11
                             ),
                             ),
 
@@ -242,7 +258,7 @@ class _RegistrationState extends State<Registration> {
                                 "Terms & Conditions ", style: TextStyle(
                                   color: colorResource.primaryColor,
                                   fontWeight: FontWeight.bold,
-                                  fontSize: 12
+                                  fontSize: 11
                               ),
                               ),
                             ),
@@ -251,20 +267,20 @@ class _RegistrationState extends State<Registration> {
                         ),
 
                         Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Text(
-                              "and ", style: TextStyle(
+                              "           and ", style: TextStyle(
                                 color: Colors.black,
                                 fontWeight: FontWeight.bold,
-                                fontSize: 12
+                                fontSize: 11
                             ),
                             ),
                             Text(
                               "Privacy Policy ", style: TextStyle(
                                 color: colorResource.primaryColor,
                                 fontWeight: FontWeight.bold,
-                                fontSize: 12
+                                fontSize: 11
                             ),
                             ),
                           ],
@@ -304,9 +320,8 @@ class _RegistrationState extends State<Registration> {
               InkWell(
                 child: Container(
 
-                  height: 50,
-
-                  width: 240,
+                  width: 170,
+                  padding: EdgeInsets.all(15),
 
                   decoration: BoxDecoration(
                       color: colorResource.primaryColor,
@@ -316,7 +331,7 @@ class _RegistrationState extends State<Registration> {
                   child: Center(
                     child: Text('Continue',style: TextStyle(
                         color: Colors.white,
-                        fontSize: 20
+                        fontSize: 18
                     ),),
                   ),
                 ),

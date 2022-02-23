@@ -64,7 +64,7 @@ class _otpVerificationState extends State<otpVerification> {
                   Text(
                     'We have sent a 4 digit otp at your number. Please Enter it within 5 min',textAlign: TextAlign.center,
                     style: TextStyle(
-                        fontSize: 18,
+                        fontSize: 17,
                         fontWeight: FontWeight.normal
                     ),
                   ),
@@ -153,8 +153,8 @@ class _otpVerificationState extends State<otpVerification> {
 
               InkWell(
                 child: Container(
-                  height: 50,
-                    width: 240,
+                  width: 170,
+                  padding: EdgeInsets.all(15),
 
                   decoration: BoxDecoration(
                       color: colorResource.primaryColor,
@@ -164,7 +164,7 @@ class _otpVerificationState extends State<otpVerification> {
                   child: Center(
                     child: Text('Submit',style: TextStyle(
                         color: Colors.white,
-                        fontSize: 20
+                        fontSize: 18
                     ),),
                   ),
                 ),
