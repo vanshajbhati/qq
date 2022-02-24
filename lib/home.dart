@@ -4,6 +4,7 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_beautiful_popup/main.dart';
+import 'package:flutter_switch/flutter_switch.dart';
 import 'package:qq/account.dart';
 import 'package:qq/buyTocken.dart';
 import 'package:qq/colors.dart';
@@ -193,13 +194,16 @@ class _HomeState extends State<Home> {
                             Container(
 
                               alignment: Alignment.center,
-                              margin: EdgeInsets.fromLTRB(00, 20, 00, 00),
-                              child: Image.asset("assets/4-2-treasure-picture-thumb.png"),
+                              margin: EdgeInsets.fromLTRB(00, 40, 00, 00),
+                              child: Image.asset("assets/4-2-treasure-picture-thumb.png", height: 120,),
                             ),
 
-                            Text("Today Context", style: TextStyle(
-                              color: Colors.white, fontSize: 22
-                            ),),
+                            Container(
+                              height: 40,
+                              child: Text("Today Context", style: TextStyle(
+                                color: Colors.white, fontSize: 26
+                              ),),
+                            ),
 
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -212,15 +216,19 @@ class _HomeState extends State<Home> {
                                       color: Color(0xff537333),
                                       child: Center(
                                         child: Text("12", style: TextStyle(
-                                          fontWeight: FontWeight.bold, color: Colors.white,fontSize: 25
+                                          fontWeight: FontWeight.bold, color: Colors.white,fontSize: 22
                                         ),),
                                       ),
                                     ),
-                                    Text("HRS", style: TextStyle(
+                                    Text("Days", style: TextStyle(
                                         color: Colors.white,
+                                      fontSize: 10,
                                       fontWeight: FontWeight.bold
                                     ), ),
                                   ],
+                                ),
+                                SizedBox(
+                                  width: 10,
                                 ),
                                 Column(
                                   children: [
@@ -235,16 +243,21 @@ class _HomeState extends State<Home> {
                                         color: Color(0xffED0056),
                                         child: Center(
                                           child: Text("35", style: TextStyle(
-                                              fontWeight: FontWeight.bold, color: Colors.white,fontSize: 25
+                                              fontWeight: FontWeight.bold, color: Colors.white,fontSize: 22
                                           ),),
                                         ),
                                       ),
                                     ),
-                                    Text("MIN", style: TextStyle(
+                                    Text("HRS", style: TextStyle(
                                         color: Colors.white,
+                                        fontSize: 10,
                                         fontWeight: FontWeight.bold
                                     ), ),
                                   ],
+                                ),
+
+                                SizedBox(
+                                  width: 10,
                                 ),
                                 Column(
                                   children: [
@@ -254,12 +267,13 @@ class _HomeState extends State<Home> {
                                       color: Color(0xffC77D0A),
                                       child: Center(
                                         child: Text("09", style: TextStyle(
-                                            fontWeight: FontWeight.bold, color: Colors.white,fontSize: 25
+                                            fontWeight: FontWeight.bold, color: Colors.white,fontSize: 22
                                         ),),
                                       ),
                                     ),
-                                    Text("SEC", style: TextStyle(
+                                    Text("MIN", style: TextStyle(
                                         color: Colors.white,
+                                        fontSize: 10,
                                         fontWeight: FontWeight.bold
                                     ), ),
                                   ],
@@ -341,59 +355,105 @@ class _HomeState extends State<Home> {
                             Padding(
                               padding: EdgeInsets.all(10),
                             ),
-                            Row(
-                              children: [
-                                InkWell(
-                                  onTap: (){
-                                    Navigator.push(context, MaterialPageRoute(builder: (Context)=>Wallet()));
-                                  },
-                                  child: Text("\$ 180,000", textAlign: TextAlign.left, style: const TextStyle(
-                                      color: Colors.white, fontSize: 20
-                                  ),),
-                                ),
-
-                                Container(
-                                  margin: EdgeInsets.all(5),
-                                  height: 40,
-                                  width: 100,
-
-                                  decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    borderRadius: BorderRadius.circular(22),
-                                  ),
-
-                                  child: InkWell(
-                                    onTap: (){
-                                      Navigator.push(context, MaterialPageRoute(builder: (Context)=>BuyToken()));
-                                    },
-                                    child: Container(
-                                      margin: EdgeInsets.only(left: 10),
-                                      child: Row(
-                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            Container(
+                              child: InkWell(
+                                onTap: (){
+                                  Navigator.push(context, MaterialPageRoute(builder: (Context)=>BuyToken()));
+                                },
+                                child: Stack(
+                                    children: <Widget>[
+                                      Row(
                                         children: [
+                                          InkWell(
+                                            onTap: (){
+                                              Navigator.push(context, MaterialPageRoute(builder: (Context)=>Wallet()));
+                                            },
+                                            child: Text("\$ 180,000", textAlign: TextAlign.left, style: const TextStyle(
+                                              color: Colors.white, fontSize: 16,
+                                              decoration: TextDecoration.underline,
+                                            ),),
+                                          ),
 
-                                          Text("5", style: TextStyle(
-                                            color: Colors.black, fontSize: 20
-                                          ),
-                                          ),
                                           Container(
+                                            width: 71,
                                             margin: EdgeInsets.all(5),
-                                            height: 24,
-                                            width: 24,
-                                            child: Icon(Icons.add, color: Colors.white,),
+                                            color: Colors.transparent,
+                                            child: Container(
+                                              margin: EdgeInsets.all(3),
+                                              height: 40,
+                                              width: 65,
 
 
-                                            decoration: BoxDecoration(
-                                              color: Colors.black,
-                                              borderRadius: BorderRadius.circular(22),
+                                              decoration: BoxDecoration(
+                                                color: Colors.white,
+                                                borderRadius: BorderRadius.only(topRight: Radius.circular(15), bottomRight: Radius.circular(15), topLeft: Radius.circular(15), bottomLeft: Radius.circular(15) ),
+                                              ),
+
+                                              child: InkWell(
+                                                onTap: (){
+                                                  Navigator.push(context, MaterialPageRoute(builder: (Context)=>BuyToken()));
+                                                },
+                                                child: Container(
+                                                  margin: EdgeInsets.only(left: 10),
+                                                  child: Row(
+                                                    mainAxisAlignment: MainAxisAlignment.start,
+                                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                                    children: [
+
+                                                      Text("5", style: TextStyle(
+                                                          color: Colors.black, fontSize: 20
+                                                      ),
+                                                      ),
+                                                      Container(
+                                                        margin: EdgeInsets.all(5),
+                                                        height: 24,
+                                                        width: 24,
+                                                        child: Image.asset("assets/tokens.png",height: 20,),
+
+
+
+
+                                                        decoration: BoxDecoration(
+
+                                                          borderRadius: BorderRadius.circular(22),
+                                                        ),
+                                                      )
+                                                    ],
+                                                  ),
+                                                ),
+                                              ),
                                             ),
                                           )
                                         ],
                                       ),
-                                    ),
-                                  ),
-                                )
-                              ],
+                                      Positioned(
+                                        left: 131,
+                                        top: 18,
+                                        child: Container(
+
+                                          width: 20,
+                                          height: 20,
+                                          decoration: BoxDecoration(
+                                            color: Colors.yellow,
+                                            borderRadius: BorderRadius.circular(20),
+                                            border: Border.all(color: Colors.black, width: 2,)
+                                          ),
+
+                                        ),
+                                      ),
+                                      Positioned(
+                                        left: 132.4,
+                                        top: 18.2,
+                                        child:
+                                             Icon(Icons.add, size: 18, ))
+
+
+
+                                    ],
+
+
+                                ),
+                              ),
                             ),
                           ],
                         ),
@@ -402,23 +462,50 @@ class _HomeState extends State<Home> {
 
                           children: [
                             SizedBox(
-                                height: 50,
-                                width: 140,
+                                height: 80,
+                                width: 120,
 
                                 child: Image.asset("assets/accountMan.png")
                                 ),
-                            Text("Rules", style: TextStyle(
-                                color: Colors.white, fontSize: 20
-                            ),),
+                            Column(
+                              children: [
+                                Padding(padding: EdgeInsets.only(top: 15)),
+                                Text("Rules", style: TextStyle(
+                                    color: Colors.white, fontSize: 15,
+                                  decoration: TextDecoration.underline
+                                ),),
 
-                            Switch(
-                              value: status,
-                              onChanged: (value) {
-                                setState(() {
-                                  status = value;
-                                  print(status);
-                                });}
-                            )
+                                SizedBox(
+                                  height: 5,
+                                ),
+
+                                Container(
+                                  height: 20,
+                                  width: 40,
+                                  child: FlutterSwitch(
+                                      value: status,
+                                      width: 50.0,
+                                      height: 20.0,
+                                      valueFontSize: 25.0,
+                                      toggleSize: 25.0,
+                                      toggleColor: colorResource.primaryColor,
+                                      activeColor: colorResource.primaryColor2,
+                                      inactiveColor: Colors.white,
+
+                                      borderRadius: 30.0,
+                                      padding: 1.0,
+
+                                      onToggle: (value) {
+                                        setState(() {
+                                          status = value;
+                                          print(status);
+                                        });}
+                                  ),
+                                )
+                              ],
+                            ),
+
+
                           ],
                         ),
 
@@ -429,7 +516,7 @@ class _HomeState extends State<Home> {
 
 
                   Positioned(
-                    top:  500 ,
+                    top:  440 ,
 
                     width: size.width,
 
@@ -458,7 +545,7 @@ class _HomeState extends State<Home> {
                                 Text(
                                   'Swipe To Enter',
                                   style: TextStyle(color: Colors.white,
-                                      fontSize: 16),
+                                      fontSize: 12),
                                 ),
 
                                 Container(
@@ -497,19 +584,23 @@ class _HomeState extends State<Home> {
                 ],
               ),
             ),
+
             Column(
               children: [
                 // Here, default theme colors are used for activeBgColor, activeFgColor, inactiveBgColor and inactiveFgColor
                 Container(
+
                   margin: EdgeInsets.all(20),
                   child: ToggleSwitch(
-                    cornerRadius: 30.0,
+                    cornerRadius: 10.0,
                     activeBgColors: [[colorResource.primaryColor], [colorResource.primaryColor]],
                     activeFgColor: Colors.white,
                     inactiveBgColor: Colors.white,
                     inactiveFgColor: Colors.black,
                     borderColor: [Colors.black26],
+
                     fontSize: 18,
+
 
                     borderWidth: 1,
                     radiusStyle: true,
