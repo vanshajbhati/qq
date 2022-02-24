@@ -32,96 +32,99 @@ class _CustomerSupportState extends State<CustomerSupport> {
           ),
         ),
         backgroundColor: Colors.white,
-        body: Center(
+        body: SingleChildScrollView(
+          child: Center(
 
 
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
 
 
-              SizedBox(
-                  height: 100,
-                  width: 100,
-                  child: Image.asset('assets/support.png', color: Colors.green,)
-              ),
+                SizedBox(
+                    height: 100,
+                    width: 100,
+                    child: Image.asset('assets/support.png', color: Colors.green,)
+                ),
 
 
-              Padding(
-                padding: EdgeInsets.all(10),
-              ),
-              Text("Customer Support"
-                , textAlign: TextAlign.center, style: TextStyle(
-                    fontSize: 24, fontWeight: FontWeight.bold
-                ),),
+                Padding(
+                  padding: EdgeInsets.all(10),
+                ),
+                Text("Customer Support"
+                  , textAlign: TextAlign.center, style: TextStyle(
+                      fontSize: 24, fontWeight: FontWeight.bold
+                  ),),
 
-              Padding(
-                padding: EdgeInsets.all(10),
-              ),
-              Text("In case of any query, please contact us"
-                , textAlign: TextAlign.center, style: TextStyle(
-                    fontSize: 18, fontWeight: FontWeight.bold
-                ),),
-              Padding(
-                padding: EdgeInsets.all(10),
-              ),
-              Text("Email will be sent to"
-                , textAlign: TextAlign.center, style: TextStyle(
-                    fontSize: 18, fontWeight: FontWeight.normal
-                ),),
-              Padding(
-                padding: EdgeInsets.all(2),
-              ),
-              InkWell(
-                child: Text("email123@gmail.com"
+                Padding(
+                  padding: EdgeInsets.all(10),
+                ),
+                Text("In case of any query, please contact us"
                   , textAlign: TextAlign.center, style: TextStyle(
                       fontSize: 18, fontWeight: FontWeight.bold
                   ),),
-
-                onTap: (){
-                  setState(() {
-                    _makePhoneCall('mailto:email123@gmail.com');
-                  });
-                },
-              ),
-              Padding(
-                padding: EdgeInsets.all(10),
-              ),
-              Text("Or call us at"
-                , textAlign: TextAlign.center, style: TextStyle(
-                    fontSize: 18, fontWeight: FontWeight.normal
-                ),),
-              Padding(
-                padding: EdgeInsets.all(2),
-              ),
-              InkWell(
-                child: Text("9123456789"
+                Padding(
+                  padding: EdgeInsets.all(10),
+                ),
+                Text("Email will be sent to"
                   , textAlign: TextAlign.center, style: TextStyle(
-                      fontSize: 22, fontWeight: FontWeight.bold
+                      fontSize: 18, fontWeight: FontWeight.normal
                   ),),
+                Padding(
+                  padding: EdgeInsets.all(2),
+                ),
+                InkWell(
+                  child: Text("email123@gmail.com"
+                    , textAlign: TextAlign.center, style: TextStyle(
+                        fontSize: 18, fontWeight: FontWeight.bold
+                    ),),
 
-                onTap: () {
-                  setState(() {
-                    _makePhoneCall('tel:9123456789');
-                  });
-                },
-              ),
+                  onTap: (){
+                    setState(() {
+                      _makePhoneCall('mailto:email123@gmail.com');
+                    });
+                  },
+                ),
+                Padding(
+                  padding: EdgeInsets.all(10),
+                ),
+                Text("Or call us at"
+                  , textAlign: TextAlign.center, style: TextStyle(
+                      fontSize: 18, fontWeight: FontWeight.normal
+                  ),),
+                Padding(
+                  padding: EdgeInsets.all(2),
+                ),
+                InkWell(
+                  child: Text("9123456789"
+                    , textAlign: TextAlign.center, style: TextStyle(
+                        fontSize: 22, fontWeight: FontWeight.bold
+                    ),),
+
+                  onTap: () {
+                    setState(() {
+                      _makePhoneCall('tel:9123456789');
+                    });
+                  },
+                ),
 
 
-              Padding(
-                padding: EdgeInsets.all(100),
-              ),
+                Padding(
+                  padding: EdgeInsets.all(100),
+                ),
 
 
-            ],
+              ],
+            ),
+
+
           ),
-
-
         ),
 
       bottomNavigationBar:  CurvedNavigationBar(
-      backgroundColor: Colors.white,
-      color: colorResource.primaryColor,
+        backgroundColor: Colors.transparent,
+        color: Color(0xf454745),
+        height: 50,
         index: 1,
       items: <Widget>[
         ImageIcon( AssetImage("assets/home (2).png", ), color: Colors.black, size: 20,),

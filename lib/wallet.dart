@@ -97,7 +97,7 @@ class _WalletState extends State<Wallet> {
 
                   Text("Rs. 10,000.00", style: TextStyle(
                       color: Color(0xff3E3C3C),
-                      fontSize: 32,
+                      fontSize: 28,
                     fontWeight: FontWeight.bold
                   ),),
 
@@ -110,16 +110,16 @@ class _WalletState extends State<Wallet> {
 
                     child:  Container(
 
-                      width: 170,
+                      width: 140,
 
                       padding: EdgeInsets.all(12),
                       child: Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.all(2.0),
                         child: Text(
                           'Withdraw',textAlign: TextAlign.center,
                           style: TextStyle(color: Colors.white,
                               fontWeight: FontWeight.bold,
-                              fontSize: 18),
+                              fontSize: 15),
                         ),
                       ),
                     ),
@@ -132,8 +132,9 @@ class _WalletState extends State<Wallet> {
 
 
 
-                  Padding(
-                    padding:  EdgeInsets.all(size.width/8),
+                  Container(
+                    padding:  EdgeInsets.only(top:size.width/18, bottom:size.width/18 ),
+                    width: 270,
                     child: Text('1. Money will be credited within next 48 hours.\n'
                         '\n2.Wallet Money will be erased if you dont withdraw within 3 days', style: TextStyle(
                         fontSize: 16

@@ -20,27 +20,28 @@ class _BuyTokenState extends State<BuyToken> {
       body: SingleChildScrollView(
         child: Container(
 
-          padding: EdgeInsets.all(40),
+          padding: EdgeInsets.only(left: 20, top: 20, right: 20, bottom: 30),
          child: Column(
             children: [
-              Padding(padding: EdgeInsets.all(20)),
 
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.start,
 
                 children: [
-
-                  Text("Buy Ticket", style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 25
-                  ),),
 
                   InkWell(
                       onTap: (){
                         Navigator.pushReplacement(context, MaterialPageRoute(builder: (Context)=>Home()));
                       },
 
-                      child: ImageIcon( AssetImage("assets/cancel.png", ), color: Colors.black,size: 30,)),
+                      child: ImageIcon( AssetImage("assets/left-arrow.png", ), color: Colors.black,size: 20,)),
+
+
+                  Text("Buy Ticket", style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20
+                  ),),
+
                 ],
               ),
 

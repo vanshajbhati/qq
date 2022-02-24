@@ -49,122 +49,15 @@ class _HomeState extends State<Home> {
     return Scaffold(
 
       backgroundColor: Colors.white,
-      endDrawer: Drawer(
 
-
-        child: ListView(
-          // Important: Remove any padding from the ListView.
-          padding: EdgeInsets.zero,
-          children: [
-
-            Container(
-              margin: EdgeInsets.fromLTRB(20, 40, 60, 40),
-
-
-              child:  Image.asset('assets/virthink.png', alignment: Alignment.centerLeft,),
-            ),
-            ListTile(
-              title: const Text('Home',  style: TextStyle(
-                  fontSize: 18
-              ),),
-
-              leading: IconButton(
-                onPressed: (){
-
-                },
-                icon: Image.asset('assets/home (3).png', ),
-              ),
-              onTap: () {
-                // Update the state of the app.
-                // ...
-              },
-            ),
-            ListTile(
-              title: const Text('About Us',style: TextStyle(
-                  fontSize: 18
-              ),),
-              leading: IconButton(
-                onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (Context) => TermsCondition()));
-                },
-                icon: Image.asset('assets/team.png'),
-              ),
-              onTap: () {
-                // Update the state of the app.
-                Navigator.push(context, MaterialPageRoute(builder: (Context) => TermsCondition()));
-              },
-            ),
-            ListTile(
-              title: const Text('Contact Us',style: TextStyle(
-                  fontSize: 18
-              ),),
-              leading: IconButton(
-                onPressed: (){
-
-                },
-                icon: Image.asset('assets/support.png'),
-              ),
-              onTap: () {
-                // Update the state of the app.
-                Navigator.push(context, MaterialPageRoute(builder: (Context)=> CustomerSupport()));
-              },
-            ),
-            ListTile(
-              title: const Text('Terms & Conditions',style: TextStyle(
-                  fontSize: 18
-              ),),
-              leading: IconButton(
-                onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (Context) => TermsCondition()));
-                },
-                icon: Image.asset('assets/terms-and-conditions.png'),
-              ),
-              onTap: () {
-                // Update the state of the app.
-                Navigator.push(context, MaterialPageRoute(builder: (Context) => TermsCondition()));
-              },
-            ),
-            ListTile(
-              title: const Text('Privacy Policy',style: TextStyle(
-                  fontSize: 18
-              ),),
-              leading: IconButton(
-                onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (Context) => TermsCondition()));
-                },
-                icon: Image.asset('assets/privacy-policy (1).png'),
-              ),
-
-              onTap: () {
-                // Update the state of the app.
-                Navigator.push(context, MaterialPageRoute(builder: (Context) => TermsCondition()));
-              },
-            ),
-            ListTile(
-              title: const Text('FAQ',style: TextStyle(
-                  fontSize: 18
-              ),),
-              leading: IconButton(
-                onPressed: (){
-
-                },
-                icon: Image.asset('assets/faq.png'),
-              ),
-              onTap: () {
-                // Update the state of the app.
-                // ...
-              },
-            ),
-          ],
-        ),
-      ),
 
       body: SingleChildScrollView(
         child: Column(
           children: [
             Container(
 
-              height: 580,
+              height: 450,
+
               width: MediaQuery.of(context).size.width,
               child:Stack(
                 children: <Widget>[
@@ -194,8 +87,8 @@ class _HomeState extends State<Home> {
                             Container(
 
                               alignment: Alignment.center,
-                              margin: EdgeInsets.fromLTRB(00, 40, 00, 00),
-                              child: Image.asset("assets/4-2-treasure-picture-thumb.png", height: 120,),
+                              margin: EdgeInsets.fromLTRB(00, 25, 00, 00),
+                              child: Image.asset("assets/4-2-treasure-picture-thumb.png", height: 110,),
                             ),
 
                             Container(
@@ -213,10 +106,10 @@ class _HomeState extends State<Home> {
                                     Container(
                                       margin: EdgeInsets.all(2),
                                       padding: EdgeInsets.all(8),
-                                      color: Color(0xff537333),
+                                      color: Colors.greenAccent,
                                       child: Center(
                                         child: Text("12", style: TextStyle(
-                                          fontWeight: FontWeight.bold, color: Colors.white,fontSize: 22
+                                          fontWeight: FontWeight.bold, color: Colors.white,fontSize: 20
                                         ),),
                                       ),
                                     ),
@@ -240,10 +133,10 @@ class _HomeState extends State<Home> {
                                       child: Container(
                                         margin: EdgeInsets.all(2),
                                         padding: EdgeInsets.all(8),
-                                        color: Color(0xffED0056),
+                                        color: Color(0xffce112c),
                                         child: Center(
-                                          child: Text("35", style: TextStyle(
-                                              fontWeight: FontWeight.bold, color: Colors.white,fontSize: 22
+                                          child: Text("15", style: TextStyle(
+                                              fontWeight: FontWeight.bold, color: Colors.white,fontSize: 20
                                           ),),
                                         ),
                                       ),
@@ -267,7 +160,7 @@ class _HomeState extends State<Home> {
                                       color: Color(0xffC77D0A),
                                       child: Center(
                                         child: Text("09", style: TextStyle(
-                                            fontWeight: FontWeight.bold, color: Colors.white,fontSize: 22
+                                            fontWeight: FontWeight.bold, color: Colors.white,fontSize: 20
                                         ),),
                                       ),
                                     ),
@@ -285,12 +178,28 @@ class _HomeState extends State<Home> {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Text("Starting Time - 4:00 PM", style: TextStyle(
-                                  color: Colors.white
-                                ), ),
-                                Text("Entry Status- Eligible", style: TextStyle(
-                                    color: Colors.white
-                                ), )
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Text("Starting Time -", style: TextStyle(
+                                      color: Colors.white
+                                    ), ),
+                                    Text(" 4:00 PM", style: TextStyle(
+                                        color: Colors.white
+                                    ), ),
+                                  ],
+                                ),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Text("Entry Status-", style: TextStyle(
+                                        color: Colors.white
+                                    ), ),
+                                    Text(" Eligible", style: TextStyle(
+                                        color: Colors.blueAccent
+                                    ), ),
+                                  ],
+                                )
                               ],
                             ),
                             Padding(
@@ -302,17 +211,21 @@ class _HomeState extends State<Home> {
                                 Text("Winners-10", style: TextStyle(
                                     color: Colors.white
                                 ), ),
-                                Text("Prize-calculation", style: TextStyle(
-                                    color: Colors.white
-                                ), )
+                                Row(
+                                  children: [
+                                    Text("Prize-", style: TextStyle(
+                                        color: Colors.white
+                                    ), ),
+                                    Text(" calculation      ", style: TextStyle(
+                                        color: Colors.greenAccent
+                                    ), ),
+                                  ],
+                                )
                               ],
                             ),
 
-                            Padding(padding: EdgeInsets.only(top: 20),),
-                            Text("V", style: TextStyle(
-                                color: Colors.white,
-                              fontSize: 20
-                            ), ),
+                            Padding(padding: EdgeInsets.only(top: 0),),
+                           Icon(Icons.keyboard_arrow_down, color: Colors.white,),
 
                             Padding(padding: EdgeInsets.only(top: 30),),
 
@@ -338,7 +251,7 @@ class _HomeState extends State<Home> {
 
                   Positioned(
                     width: MediaQuery.of(context).size.width,
-                    top: 40 ,
+                    top: 20 ,
                     left:20,
 
 
@@ -516,7 +429,7 @@ class _HomeState extends State<Home> {
 
 
                   Positioned(
-                    top:  440 ,
+                    top:  390 ,
 
                     width: size.width,
 
@@ -558,7 +471,7 @@ class _HomeState extends State<Home> {
                                     borderRadius: BorderRadius.circular(22),
                                   ),
                                   child: Icon(Icons.check
-                                    ,color: colorResource.primaryColor2,  ),
+                                    ,color: colorResource.primaryColor2, size: 17, ),
                                 ),
 
 
@@ -599,12 +512,12 @@ class _HomeState extends State<Home> {
                     inactiveFgColor: Colors.black,
                     borderColor: [Colors.black26],
 
-                    fontSize: 18,
+                    fontSize: 12,
 
 
                     borderWidth: 1,
                     radiusStyle: true,
-                    minWidth: 150.0,
+                    minWidth: 90.0,
                     minHeight: 30.0,
                     initialLabelIndex: 0,
                     totalSwitches: 2,
@@ -655,7 +568,7 @@ class _HomeState extends State<Home> {
                       children: [
 
                         SizedBox(
-                          height: 35,
+                          height: 30,
                           child: Image.asset('assets/crown.png',fit: BoxFit.fitHeight,),
                         ),
                         InkWell(
@@ -674,7 +587,7 @@ class _HomeState extends State<Home> {
 
                           },
                           child: CircleAvatar(
-                            radius: 40.0,
+                            radius: 50.0,
                             backgroundImage:
                             NetworkImage("https://images.unsplash.com/photo-1509967419530-da38b4704bc6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d29tYW4lMjBmYWNlfGVufDB8fDB8fA%3D%3D&w=1000&q=80"),
                             backgroundColor: Colors.transparent,
@@ -743,8 +656,11 @@ class _HomeState extends State<Home> {
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: [
 
+                              SizedBox(
+                                width: size.width/20,
+                              ),
                               Text((index+4).toString()+".", style: TextStyle(
-                                  fontSize: 20, fontWeight: FontWeight.bold
+                                  fontSize: 18, fontWeight: FontWeight.bold
                               ), ),
 
 
@@ -758,7 +674,7 @@ class _HomeState extends State<Home> {
                               ),
                               Padding(padding: EdgeInsets.all(10)),
                               Text("Name", style: TextStyle(
-                                  fontSize: 20, fontWeight: FontWeight.normal
+                                  fontSize: 18, fontWeight: FontWeight.normal
                               ),
                               ),
                               Padding(padding: EdgeInsets.all(10)),
@@ -777,14 +693,14 @@ class _HomeState extends State<Home> {
                                     1, 5, -6, 0,
                                   ],
                                 ),
-                                width: 100,
+                                width: 90,
                                 height: 50,
                               ),
                               Padding(padding: EdgeInsets.all(10)),
 
                               Container(
                                 height:30,
-                                width:60,
+                                width:55,
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(20),
                                     color: Color(0xffAEE3D0)
@@ -795,11 +711,15 @@ class _HomeState extends State<Home> {
                                     '\$930', style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       color: colorResource.primaryColor2,
-                                      fontSize: 16
+                                      fontSize: 14
                                   ),
                                   ),
                                 ),
-                              )
+                              ),
+
+                              SizedBox(
+                                width: size.width/20,
+                              ),
                               //
                             ],
                           )
@@ -815,9 +735,120 @@ class _HomeState extends State<Home> {
         ),
       ),
 
+      // endDrawer: Drawer(
+      //
+      //
+      //   child: ListView(
+      //     // Important: Remove any padding from the ListView.
+      //     padding: EdgeInsets.zero,
+      //     children: [
+      //
+      //       Container(
+      //         margin: EdgeInsets.fromLTRB(20, 40, 60, 40),
+      //
+      //
+      //         child:  Image.asset('assets/virthink.png', alignment: Alignment.centerLeft,),
+      //       ),
+      //       ListTile(
+      //         title: const Text('Home',  style: TextStyle(
+      //             fontSize: 18
+      //         ),),
+      //
+      //         leading: IconButton(
+      //           onPressed: (){
+      //
+      //           },
+      //           icon: Image.asset('assets/home (3).png', ),
+      //         ),
+      //         onTap: () {
+      //           // Update the state of the app.
+      //           // ...
+      //         },
+      //       ),
+      //       ListTile(
+      //         title: const Text('About Us',style: TextStyle(
+      //             fontSize: 18
+      //         ),),
+      //         leading: IconButton(
+      //           onPressed: (){
+      //             Navigator.push(context, MaterialPageRoute(builder: (Context) => TermsCondition()));
+      //           },
+      //           icon: Image.asset('assets/team.png'),
+      //         ),
+      //         onTap: () {
+      //           // Update the state of the app.
+      //           Navigator.push(context, MaterialPageRoute(builder: (Context) => TermsCondition()));
+      //         },
+      //       ),
+      //       ListTile(
+      //         title: const Text('Contact Us',style: TextStyle(
+      //             fontSize: 18
+      //         ),),
+      //         leading: IconButton(
+      //           onPressed: (){
+      //
+      //           },
+      //           icon: Image.asset('assets/support.png'),
+      //         ),
+      //         onTap: () {
+      //           // Update the state of the app.
+      //           Navigator.push(context, MaterialPageRoute(builder: (Context)=> CustomerSupport()));
+      //         },
+      //       ),
+      //       ListTile(
+      //         title: const Text('Terms & Conditions',style: TextStyle(
+      //             fontSize: 18
+      //         ),),
+      //         leading: IconButton(
+      //           onPressed: (){
+      //             Navigator.push(context, MaterialPageRoute(builder: (Context) => TermsCondition()));
+      //           },
+      //           icon: Image.asset('assets/terms-and-conditions.png'),
+      //         ),
+      //         onTap: () {
+      //           // Update the state of the app.
+      //           Navigator.push(context, MaterialPageRoute(builder: (Context) => TermsCondition()));
+      //         },
+      //       ),
+      //       ListTile(
+      //         title: const Text('Privacy Policy',style: TextStyle(
+      //             fontSize: 18
+      //         ),),
+      //         leading: IconButton(
+      //           onPressed: (){
+      //             Navigator.push(context, MaterialPageRoute(builder: (Context) => TermsCondition()));
+      //           },
+      //           icon: Image.asset('assets/privacy-policy (1).png'),
+      //         ),
+      //
+      //         onTap: () {
+      //           // Update the state of the app.
+      //           Navigator.push(context, MaterialPageRoute(builder: (Context) => TermsCondition()));
+      //         },
+      //       ),
+      //       ListTile(
+      //         title: const Text('FAQ',style: TextStyle(
+      //             fontSize: 18
+      //         ),),
+      //         leading: IconButton(
+      //           onPressed: (){
+      //
+      //           },
+      //           icon: Image.asset('assets/faq.png'),
+      //         ),
+      //         onTap: () {
+      //           // Update the state of the app.
+      //           // ...
+      //         },
+      //       ),
+      //     ],
+      //   ),
+      // ),
+
       bottomNavigationBar:  CurvedNavigationBar(
-        backgroundColor: Colors.white,
-        color: colorResource.primaryColor,
+        backgroundColor: Colors.transparent,
+        color: Color(0xf454745),
+        height: 50,
         items: <Widget>[
           ImageIcon( AssetImage("assets/home (2).png", ), color: Colors.black, size: 20,),
           ImageIcon( AssetImage("assets/search-interface-symbol.png", ), color: Colors.black,size: 20,),

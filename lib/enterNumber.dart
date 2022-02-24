@@ -127,6 +127,8 @@ class _EnterNumberState extends State<EnterNumber> {
               InkWell(
                 child: Container(
 
+                  margin: EdgeInsets.only(top: 15),
+
                   width: 170,
                   padding: EdgeInsets.all(15),
 

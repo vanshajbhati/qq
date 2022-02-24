@@ -342,8 +342,9 @@ backgroundColor: Colors.white,
 
 
         bottomNavigationBar:  CurvedNavigationBar(
-          backgroundColor: Colors.white,
-          color: colorResource.primaryColor,
+          backgroundColor: Colors.transparent,
+          color: Color(0xf454745),
+          height: 50,
           index: 4,
           items: <Widget>[
             ImageIcon( AssetImage("assets/home (2).png", ), color: Colors.black, size: 20,),

@@ -153,6 +153,7 @@ class _otpVerificationState extends State<otpVerification> {
 
               InkWell(
                 child: Container(
+                  margin: EdgeInsets.only(top: 40),
                   width: 170,
                   padding: EdgeInsets.all(15),
 
