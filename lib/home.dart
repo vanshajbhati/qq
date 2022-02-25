@@ -56,7 +56,7 @@ class _HomeState extends State<Home> {
           children: [
             Container(
 
-              height: 450,
+              height: 445,
 
               width: MediaQuery.of(context).size.width,
               child:Stack(
@@ -445,7 +445,7 @@ class _HomeState extends State<Home> {
                           child: Container(
 
                                 width: 240,
-                            height: 60,
+                            height: 55,
 
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -503,7 +503,8 @@ class _HomeState extends State<Home> {
                 // Here, default theme colors are used for activeBgColor, activeFgColor, inactiveBgColor and inactiveFgColor
                 Container(
 
-                  margin: EdgeInsets.all(20),
+
+                  margin: EdgeInsets.only( top: 10,bottom: 10),
                   child: ToggleSwitch(
                     cornerRadius: 10.0,
                     activeBgColors: [[colorResource.primaryColor], [colorResource.primaryColor]],
@@ -533,20 +534,21 @@ class _HomeState extends State<Home> {
                     Column(
 
                       children: [
+                        Padding(padding: EdgeInsets.only(top: 10)),
 
                         SizedBox(
-                          width: 20,
-                          height: 20,
+                          width: 15,
+                          height: 15,
                           child: FittedBox(
-                            child: Image.asset('assets/arrow-up.png',color: colorResource.primaryColor2,),
+                            child: Image.asset('assets/arrow-up.png',color: colorResource.primaryColor2, ),
                           ),
                         ),
                         Text('2', style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 22
+                            fontWeight: FontWeight.bold, fontSize: 18
                         ),),
 
                         CircleAvatar(
-                          radius: 30.0,
+                          radius: 27.0,
                           backgroundImage:
                           NetworkImage("https://media.istockphoto.com/photos/casual-man-on-white-picture-id531547724?k=20&m=531547724&s=612x612&w=0&h=E2f2We8XZXAxUncND6S6LSU5e1IQ-wO0cm1eMvRrXuo="),
                           backgroundColor: Colors.transparent,
@@ -560,7 +562,7 @@ class _HomeState extends State<Home> {
                             fontWeight: FontWeight.normal, fontSize: 12
                         ),),
                         Text('124', style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 22
+                            fontWeight: FontWeight.bold, fontSize: 18
                         ),),
                       ],
                     ),
@@ -568,7 +570,7 @@ class _HomeState extends State<Home> {
                       children: [
 
                         SizedBox(
-                          height: 30,
+                          height: 22,
                           child: Image.asset('assets/crown.png',fit: BoxFit.fitHeight,),
                         ),
                         InkWell(
@@ -587,7 +589,7 @@ class _HomeState extends State<Home> {
 
                           },
                           child: CircleAvatar(
-                            radius: 50.0,
+                            radius: 40.0,
                             backgroundImage:
                             NetworkImage("https://images.unsplash.com/photo-1509967419530-da38b4704bc6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d29tYW4lMjBmYWNlfGVufDB8fDB8fA%3D%3D&w=1000&q=80"),
                             backgroundColor: Colors.transparent,
@@ -601,25 +603,26 @@ class _HomeState extends State<Home> {
                             fontWeight: FontWeight.normal, fontSize: 12
                         ),),
                         Text('124', style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 22
+                            fontWeight: FontWeight.bold, fontSize: 18
                         ),),
                       ],
                     ),
                     Column(
 
                       children: [
+                        Padding(padding: EdgeInsets.only(top: 10)),
                         Text('3', style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 22
+                            fontWeight: FontWeight.bold, fontSize: 18
                         ),),
                         SizedBox(
-                          width: 20,
-                          height: 20,
+                          width: 15,
+                          height: 15,
                           child: FittedBox(
                             child: Image.asset('assets/arrow-down-filled-triangle.png',color: Colors.red,),
                           ),
                         ),
                         CircleAvatar(
-                          radius: 30.0,
+                          radius: 27.0,
                           backgroundImage:
                           NetworkImage("https://media.istockphoto.com/photos/casual-man-on-white-picture-id531547724?k=20&m=531547724&s=612x612&w=0&h=E2f2We8XZXAxUncND6S6LSU5e1IQ-wO0cm1eMvRrXuo="),
                           backgroundColor: Colors.transparent,
@@ -632,17 +635,15 @@ class _HomeState extends State<Home> {
                             fontWeight: FontWeight.normal, fontSize: 12
                         ),),
                         Text('124', style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 22
+                            fontWeight: FontWeight.bold, fontSize: 18
                         ),),
                       ],
                     ),
-
-
                   ],
                 ),
 
                 Padding(
-                  padding: const EdgeInsets.only(top: 20, bottom: 20),
+                  padding: const EdgeInsets.only(top: 0, bottom: 20),
                   child: ListView.builder(
                     physics: NeverScrollableScrollPhysics(),
                     shrinkWrap: true,
@@ -672,12 +673,12 @@ class _HomeState extends State<Home> {
                                 NetworkImage("https://media.istockphoto.com/photos/casual-man-on-white-picture-id531547724?k=20&m=531547724&s=612x612&w=0&h=E2f2We8XZXAxUncND6S6LSU5e1IQ-wO0cm1eMvRrXuo="),
                                 backgroundColor: Colors.transparent,
                               ),
-                              Padding(padding: EdgeInsets.all(10)),
+                              Padding(padding: EdgeInsets.all(2)),
                               Text("Name", style: TextStyle(
                                   fontSize: 18, fontWeight: FontWeight.normal
                               ),
                               ),
-                              Padding(padding: EdgeInsets.all(10)),
+                              Padding(padding: EdgeInsets.all(5)),
 
                               Container(
                                 child: SfSparkLineChart(
@@ -693,10 +694,10 @@ class _HomeState extends State<Home> {
                                     1, 5, -6, 0,
                                   ],
                                 ),
-                                width: 90,
+                                width: 80,
                                 height: 50,
                               ),
-                              Padding(padding: EdgeInsets.all(10)),
+                              Padding(padding: EdgeInsets.all(5)),
 
                               Container(
                                 height:30,
